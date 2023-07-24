@@ -212,48 +212,62 @@
 
 
 
-#define _CRT_SECURE_NO_WARNINGS // 忽略 strtok_s 的警告
+//#define _CRT_SECURE_NO_WARNINGS // 忽略 strtok_s 的警告
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main()
+//{
+//    printf("通过指针数组来搞串串\n");
+//    char str[] = "Hello1,World2,hey3,hey4,hey5";
+//    char* pstr[10];
+//
+//    char* q;
+//    int i = 1;
+//    q = strtok(str, ",");
+//    if (q != NULL)
+//    {
+//        pstr[i - 1] = q;
+//    }
+//    while (1)
+//    {
+//        i++;
+//        q = strtok(NULL, ",");
+//        if (q != NULL)
+//            pstr[i - 1] = q;
+//        else
+//            break;
+//    }
+//
+//    int j = 0;
+//    for (j = 0; j < i - 1; j++)
+//    {
+//        printf("获取第%d个串串为：%s\n", j + 1, pstr[j]);
+//    }
+//    printf("没有串串了\n");
+//
+//    return 0;
+//}
+
+
+
+
 #include <stdio.h>
 #include <string.h>
 
 int main()
 {
-    printf("通过指针数组来搞串串\n");
-    char str[] = "Hello1,World2,hey3,hey4,hey5";
-    char* pstr[10];
+	char* p =(char*) "chenlichen handsome";
 
-    char* q;
-    int i = 1;
-    q = strtok(str, ",");
-    if (q != NULL)
-    {
-        pstr[i - 1] = q;
-    }
-    while (1)
-    {
-        i++;
-        q = strtok(NULL, ",");
-        if (q != NULL)
-            pstr[i - 1] = q;
-        else
-            break;
-    }
+	char str[128] = { '\0' };
+	puts(p);
+	printf("%s \n", p);
+	puts("请输入字符串");
+	gets_s(str);
+	puts(str);
+	return 0;
 
-    int j = 0;
-    for (j = 0; j < i - 1; j++)
-    {
-        printf("获取第%d个串串为：%s\n", j + 1, pstr[j]);
-    }
-    printf("没有串串了\n");
-
-    return 0;
 }
-
-
-
-
-
-
 
 
 
