@@ -257,7 +257,11 @@
 
 int main()
 {
+<<<<<<< HEAD
 	char* p =(char*) "chenlichen handsome";
+=======
+	const char* p = "chenlichen handsome";
+>>>>>>> d68b915a5ea5c0b8595b171321338e3109c788d2
 
 	char str[128] = { '\0' };
 	puts(p);
